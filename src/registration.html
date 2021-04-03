@@ -1,76 +1,92 @@
 <!DOCTYPE html>
 
-<html>
+<html class="fullsize">
     <head>
         <link rel="stylesheet" href="registration.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body>
+    <body class="fullsize">
         <header>
-            vinyl exchange
+            <span class="material-icons">
+                <span class ="magenta">disc_full</span>
+            </span>
+            vinyl<span class ="magenta">exchange</span>
         </header>
-        <main>
+        <main class="fullsize">
             <form method="POST">
-                <div>
+                <div class="pad">
                     <label>
-                        First Name <input id="firstname" name="fname" type="text" required/>
+                        First Name 
+                        <p><input id="firstname" name="fname" class="inputstyle" type="text" required/></p>
                     </label>
                 </div>
-                <div>
+                <div class="pad">
                     <label>
-                        Last Name <input id="lastname" name="lname" type="text" required/>
+                        Last Name 
+                        <p><input id="lastname" name="lname" class="inputstyle" type="text" required/></p>
                     </label>
                 </div>
-                <div>
+                <div class="pad">
+                    <p>
                     <label>
                         Male <input type="radio" name="gender" id="male" value="0">
                     </label>
                     <label>
                         Female <input type="radio" name="gender" id="female" value="1">
                     </label>
+                    </p>
                 </div>
-                <div>
+                <div class="pad">
                     <label>
-                        Date of Birth <input id="dateofbirth" name="dateofbirth" type="date"/>
+                        Date of Birth 
+                        <p><input id="dateofbirth" name="dateofbirth" class="inputstyle" type="date"/></p>
                     </label>
                 </div>
-                <div>
+                <div class="pad">
                     <label>
-                        Email Address <input id="e-mail" name="email" type="email" required/>
+                    Email Address 
+                    <p><input id="e-mail" name="email" class="inputstyle" type="email" required/></p>
                     </label>
                 </div>
-                <div>
+                <div class="pad">
                     <label>
-                        Password <input id="password" name="passw" type="password" required/>
+                        Password 
+                        <p><input id="password" name="passw" class="inputstyle" type="password" required/></p>
                     </label>
                 </div>
-                <div>
+                <div class="pad">
                     <label>
-                        Confirm Password <input id="confpass" name="cpassw" type="password" required/>
+                        Confirm Password 
+                        <p><input id="confpass" name="cpassw" class="inputstyle" type="password" required/></p>
                     </label>
                 </div>
-                <div>
+                <div class="pad">
                     <label for="join-reason">
                         Why would you like to join?
                     </label>
-                    <select name="reason" id="join-reason">
+                    <p><select name="reason" id="join-reason" class="inputstyle" >
                         <option value="buy">I would like to mostly buy vinyls</option>
                         <option value="sell">I would like to mostly sell vinyls</option>
                         <option value="exchange">I would like to exchange vinyls</option>
-                    </select>
+                    </select></p>
                 </div>
-                <div>
+                <div class="pad">
                     <label>
-                        <input id="terms" name="tac" type="checkbox" required> 
-                        I accept the terms and conditions
+                        <p><input id="terms" name="tac" type="checkbox" required> 
+                        I accept the terms and conditions</p>
                     </label>
-                </div>
+                </div class="pad">
                 <button type="submit" id="reg">
                     Registration
                 </button>
             </form>
         </main>
         <footer>
-            made with <span class ="magenta">love</span> by adam nyitrai
+            <div>
+                made with <span class ="magenta">love</span> by adam nyitrai
+            </div>
         </footer>
     </body>
 </html>
