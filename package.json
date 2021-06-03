@@ -1,0 +1,22 @@
+{
+  "name": "vinyl-exchange",
+  "version": "0.0.1",
+  "description": "> Web platform for exchanging vinyls",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyitrai87/vinyl-exchange.git"
+  },
+  "author": "Adam Nyitrai",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/nyitrai87/vinyl-exchange/issues"
+  },
+  "homepage": "https://github.com/nyitrai87/vinyl-exchange#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
