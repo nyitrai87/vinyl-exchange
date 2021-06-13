@@ -1,0 +1,8 @@
+{
+    "severity": "error",
+    "rules": [{
+        "directory": "src",
+        "rule": "kebab-case",
+        "ignore": [ "__tests__", "__mocks__" ]
+    }]
+}

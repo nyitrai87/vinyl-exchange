@@ -1,25 +1,33 @@
 {
-  "name": "vinyl-exchange",
-  "version": "0.0.1",
-  "description": "> Web platform for exchanging vinyls",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon ./src/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nyitrai87/vinyl-exchange.git"
-  },
-  "author": "Adam Nyitrai",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/nyitrai87/vinyl-exchange/issues"
-  },
-  "homepage": "https://github.com/nyitrai87/vinyl-exchange#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+    "name": "vinyl-exchange",
+    "version": "0.0.1",
+    "description": "> Web platform for exchanging vinyls",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon ./src/server.js",
+        "lint:js": "eslint src/**/*.js",
+        "lint:paths": "path-linter --colorize",
+        "lint": "concurrently 'npm:lint:*'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nyitrai87/vinyl-exchange.git"
+    },
+    "author": "Adam Nyitrai",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/nyitrai87/vinyl-exchange/issues"
+    },
+    "homepage": "https://github.com/nyitrai87/vinyl-exchange#readme",
+    "dependencies": {
+        "express": "4.17.1"
+    },
+    "devDependencies": {
+        "@attilagyongyosi/eslint-config": "0.4.0",
+        "@attilagyongyosi/path-linter": "2.1.5",
+        "concurrently": "6.2.0",
+        "eslint": "7.28.0",
+        "eslint-config-recommended": "4.1.0",
+        "nodemon": "2.0.7"
+    }
 }
