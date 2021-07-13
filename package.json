@@ -21,7 +21,8 @@
     },
     "homepage": "https://github.com/nyitrai87/vinyl-exchange#readme",
     "dependencies": {
-        "express": "4.17.1"
+        "express": "4.17.1",
+        "mongoose": "5.13.0"
     },
     "devDependencies": {
         "@attilagyongyosi/eslint-config": "0.4.0",
