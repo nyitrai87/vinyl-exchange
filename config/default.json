@@ -1,0 +1,9 @@
+{
+    "mongoDb": {
+        "host": "localhost",
+        "port": 27017
+    },
+    "express": {
+        "port": 4000
+    }
+}

@@ -1,4 +1,5 @@
 const express = require('express');
+const config = require('config');
 
 const mongoDbClient = require('./data/mongodb-client');
 
@@ -9,7 +10,8 @@ const createNewVinyl = require('./api/vinyls/create-vinyl-handler');
 const deleteVinylById = require('./api/vinyls/delete-vinyl-handler');
 const modifyVinylById = require('./api/vinyls/modify-vinyl-handler');
 
-const port = 3000;
+const DEFAULT_PORT = 3000;
+const port = config.get('express.port') || DEFAULT_PORT;
 const app = express();
 
 mongoDbClient.onConnectionError(error => {
@@ -24,7 +26,11 @@ mongoDbClient.onSuccessfulConnect(() => {
     });
 });
 
-mongoDbClient.connect('mongodb://localhost:27017/vinyl-exchange');
+const mongoHost = config.get('mongoDb.host');
+const mongoPort = config.get('mongoDb.port');
+const connectionString = `mongodb://${mongoHost}:${mongoPort}/vinyl-exchange`;
+
+mongoDbClient.connect(connectionString);
 
 app.use(express.json());
 
