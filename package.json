@@ -22,6 +22,7 @@
     },
     "homepage": "https://github.com/nyitrai87/vinyl-exchange#readme",
     "dependencies": {
+        "bcrypt": "5.0.1",
         "config": "3.3.6",
         "cross-env": "7.0.3",
         "express": "4.17.1",
