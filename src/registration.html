@@ -15,33 +15,33 @@
             vinyl<span class ="magenta">exchange</span>
         </header>
         <main class="fullsize">
-            <form method="POST">
+            <form action="/users" method="POST">
                 <div class="pad">
                     <label>
-                        First Name 
-                        <p><input id="firstname" name="fname" class="inputstyle" type="text" required/></p>
+                        Username 
+                        <p><input id="userName" name="userName" class="inputstyle" type="text" required/></p>
                     </label>
                 </div>
                 <div class="pad">
                     <label>
-                        Last Name 
-                        <p><input id="lastname" name="lname" class="inputstyle" type="text" required/></p>
+                        Name 
+                        <p><input id="name" name="name" class="inputstyle" type="text" required/></p>
                     </label>
                 </div>
                 <div class="pad">
                     <p>
                     <label>
-                        Male <input type="radio" name="gender" id="male" value="0">
+                        Male <input type="radio" name="gender" id="male" value="male">
                     </label>
                     <label>
-                        Female <input type="radio" name="gender" id="female" value="1">
+                        Female <input type="radio" name="gender" id="female" value="female">
                     </label>
                     </p>
                 </div>
                 <div class="pad">
                     <label>
                         Date of Birth 
-                        <p><input id="dateofbirth" name="dateofbirth" class="inputstyle" type="date"/></p>
+                        <p><input id="dateOfBirth" name="dateOfBirth" class="inputstyle" type="date"/></p>
                     </label>
                 </div>
                 <div class="pad">
@@ -53,20 +53,20 @@
                 <div class="pad">
                     <label>
                         Password 
-                        <p><input id="password" name="passw" class="inputstyle" type="password" required/></p>
+                        <p><input id="password" name="password" class="inputstyle" type="password" required/></p>
                     </label>
                 </div>
                 <div class="pad">
                     <label>
                         Confirm Password 
-                        <p><input id="confpass" name="cpassw" class="inputstyle" type="password" required/></p>
+                        <p><input id="confpass" name="confpass" class="inputstyle" type="password" required/></p>
                     </label>
                 </div>
                 <div class="pad">
-                    <label for="join-reason">
+                    <label for="joinReason">
                         Why would you like to join?
                     </label>
-                    <p><select name="reason" id="join-reason" class="inputstyle" >
+                    <p><select name="joinReason" id="joinReason" class="inputstyle" >
                         <option value="buy">I would like to mostly buy vinyls</option>
                         <option value="sell">I would like to mostly sell vinyls</option>
                         <option value="exchange">I would like to exchange vinyls</option>

@@ -33,9 +33,15 @@ const connectionString = `mongodb://${mongoHost}:${mongoPort}/vinyl-exchange`;
 mongoDbClient.connect(connectionString);
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.type('text/plain').send('Hello World!');
+});
+
+app.get('/registration', (req, res) => {
+    res.sendFile(__dirname + '/registration.html');
 });
 
 app.get('/vinyls', listVinylsHandler);
