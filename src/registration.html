@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 
-<html class="fullsize">
+<html class="fullsize" lang="en">
     <head>
-        <link rel="stylesheet" href="auth.css">
+        <title>Vinyl Exchange</title>
+        <link rel="stylesheet" href="common.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body class="fullsize">
-        <header>
-            <span class="material-icons">
-                <span class ="magenta">disc_full</span>
-            </span>
-            vinyl<span class ="magenta">exchange</span>
+    <body class="flex flex-column fullsize">
+        <header class="flex panel">
+            <span class="material-icons magenta">disc_full</span>
+            vinyl<span class="magenta">exchange</span>
         </header>
-        <main class="fullsize">
-            <form action="/users" method="POST" id="reg-form">
+        <main class="flex fullsize">
+            <form action="/users" method="POST" class="flex flex-column panel">
                 <div class="pad">
                     <label>
-                        Username 
-                        <p><input id="username" name="userName" class="inputstyle" type="text" required/></p>
+                        Username
+                        <input id="username" name="userName" class="input-style" type="text" required/>
                     </label>
                 </div>
                 <div class="pad">
                     <label>
-                        Name 
-                        <p><input id="name" name="name" class="inputstyle" type="text" required/></p>
+                        Name
+                        <input id="name" name="name" class="input-style" type="text" required/>
                     </label>
                 </div>
                 <div class="pad">
-                    <p>
                     <label>
                         Male <input type="radio" name="gender" id="male" value="male">
                     </label>
                     <label>
                         Female <input type="radio" name="gender" id="female" value="female">
                     </label>
-                    </p>
                 </div>
                 <div class="pad">
                     <label>
-                        Date of Birth 
-                        <p><input id="date-of-birth" name="dateOfBirth" class="inputstyle" type="date"/></p>
+                        Date of Birth
+                        <input name="dateOfBirth" class="input-style" type="date"/>
                     </label>
                 </div>
                 <div class="pad">
                     <label>
-                    Email Address 
-                    <p><input id="e-mail" name="email" class="inputstyle" type="email" required/></p>
+                    Email Address
+                    <input id="e-mail" name="email" class="input-style" type="email" required/>
                     </label>
                 </div>
                 <div class="pad">
                     <label>
-                        Password 
-                        <p><input id="password" name="password" class="inputstyle" type="password" required/></p>
+                        Password
+                        <input id="password" name="password" class="input-style" type="password" required/>
                     </label>
                 </div>
                 <div class="pad">
                     <label>
-                        Confirm Password 
-                        <p><input id="confpass" name="confpass" class="inputstyle" type="password" required/></p>
+                        Confirm Password
+                        <input id="confpass" name="confpass" class="input-style" type="password" required/>
                     </label>
                 </div>
                 <div class="pad">
-                    <label for="joinReason">
+                    <label>
                         Why would you like to join?
+                        <select name="joinReason" class="input-style">
+                            <option value="buy">I would like to mostly buy vinyls</option>
+                            <option value="sell">I would like to mostly sell vinyls</option>
+                            <option value="exchange">I would like to exchange vinyls</option>
+                        </select>
                     </label>
-                    <p><select name="joinReason" id="join-reason" class="inputstyle" >
-                        <option value="buy">I would like to mostly buy vinyls</option>
-                        <option value="sell">I would like to mostly sell vinyls</option>
-                        <option value="exchange">I would like to exchange vinyls</option>
-                    </select></p>
                 </div>
                 <div class="pad">
                     <label>
-                        <p><input id="terms" name="tac" type="checkbox" required> 
-                        I accept the terms and conditions</p>
+                        <input id="terms" name="tac" type="checkbox" required>
+                        I accept the terms and conditions
                     </label>
                 </div>
-                <button type="submit" id="reg">
-                    Registration
-                </button>
+                <button type="submit" class="bg-magenta">Registration</button>
             </form>
         </main>
-        <footer>
-            <div>
-                made with <span class ="magenta">love</span> by adam nyitrai
-            </div>
+        <footer class="panel">
+            <span>made with <span class="magenta">love</span> by adam nyitrai</span>
         </footer>
     </body>
 </html>
