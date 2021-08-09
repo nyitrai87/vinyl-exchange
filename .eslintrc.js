@@ -8,5 +8,11 @@ module.exports = {
     },
     parserOptions: {
         ecmaVersion: 11
+    },
+    globals: {
+        document: 'readonly',
+        FormData: 'readonly',
+        fetch: 'readonly',
+        location: 'readonly'
     }
-}
+};

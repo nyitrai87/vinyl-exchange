@@ -2,7 +2,7 @@
 
 <html class="fullsize">
     <head>
-        <link rel="stylesheet" href="registration.css">
+        <link rel="stylesheet" href="auth.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,11 +15,11 @@
             vinyl<span class ="magenta">exchange</span>
         </header>
         <main class="fullsize">
-            <form action="/users" method="POST">
+            <form action="/users" method="POST" id="reg-form">
                 <div class="pad">
                     <label>
                         Username 
-                        <p><input id="userName" name="userName" class="inputstyle" type="text" required/></p>
+                        <p><input id="username" name="userName" class="inputstyle" type="text" required/></p>
                     </label>
                 </div>
                 <div class="pad">
@@ -41,7 +41,7 @@
                 <div class="pad">
                     <label>
                         Date of Birth 
-                        <p><input id="dateOfBirth" name="dateOfBirth" class="inputstyle" type="date"/></p>
+                        <p><input id="date-of-birth" name="dateOfBirth" class="inputstyle" type="date"/></p>
                     </label>
                 </div>
                 <div class="pad">
@@ -66,7 +66,7 @@
                     <label for="joinReason">
                         Why would you like to join?
                     </label>
-                    <p><select name="joinReason" id="joinReason" class="inputstyle" >
+                    <p><select name="joinReason" id="join-reason" class="inputstyle" >
                         <option value="buy">I would like to mostly buy vinyls</option>
                         <option value="sell">I would like to mostly sell vinyls</option>
                         <option value="exchange">I would like to exchange vinyls</option>
@@ -77,7 +77,7 @@
                         <p><input id="terms" name="tac" type="checkbox" required> 
                         I accept the terms and conditions</p>
                     </label>
-                </div class="pad">
+                </div>
                 <button type="submit" id="reg">
                     Registration
                 </button>

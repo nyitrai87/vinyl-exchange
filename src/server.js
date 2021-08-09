@@ -3,7 +3,7 @@ const config = require('config');
 
 const mongoDbClient = require('./data/mongodb-client');
 
-const createUser = require('./auth/auth.api');
+const authAPI = require('./auth/auth.api');
 const listVinylsHandler = require('./api/vinyls/list-all-handler');
 const getVinylById = require('./api/vinyls/get-vinyl-handler');
 const createNewVinyl = require('./api/vinyls/create-vinyl-handler');
@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.type('text/plain').send('Hello World!');
+    res.sendFile(__dirname + '/login.html');
 });
 
 app.get('/registration', (req, res) => {
@@ -50,4 +50,5 @@ app.post('/vinyls', createNewVinyl);
 app.delete('/vinyls/:id', deleteVinylById);
 app.put('/vinyls/:id', modifyVinylById);
 
-app.post('/users', createUser);
+app.post('/users', authAPI.createUser);
+app.post('/login', authAPI.login);
