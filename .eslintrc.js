@@ -4,15 +4,10 @@ module.exports = {
         '@attilagyongyosi/eslint-config',
     ],
     env: {
-        node: true
+        node: true,
+        browser: true
     },
     parserOptions: {
         ecmaVersion: 11
-    },
-    globals: {
-        document: 'readonly',
-        FormData: 'readonly',
-        fetch: 'readonly',
-        location: 'readonly'
     }
 };
