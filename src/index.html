@@ -1,8 +1,40 @@
 <!DOCTYPE html>
 
-<html>
+<html class="fullsize" lang="en">
     <head>
+        <title>Vinyl Exchange</title>
+        <link rel="stylesheet" href="/common.css">
+        <link rel="stylesheet" href="/index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type="text/javascript" src="login.js" async defer></script>
     </head>
-    <body>
+    <body class="flex flex-column fullsize">
+        <header class="flex panel">
+            <span class="material-icons magenta">disc_full</span>
+            vinyl<span class="magenta">exchange</span>
+        </header>
+        <main class="flex fullsize">
+            <form id="login-form" action="/login" method="POST" class="flex flex-column panel">
+                <div class="pad">
+                    <label>
+                        Username
+                        <input id="username" name="userName" class="input-style" type="text" required/>
+                    </label>
+                </div>
+                <div class="pad">
+                    <label>
+                        Password
+                        <input id="password" name="password" class="input-style" type="password" required/>
+                    </label>
+                </div>
+                <p class="hidden error-message" id="login-error-message">Invalid username or password!</p>
+                <button type="submit" class="bg-magenta">Login</button>
+            </form>
+        </main>
+        <footer class="panel">
+            <span>made with <span class="magenta">love</span> by adam nyitrai</span>
+        </footer>
     </body>
 </html>

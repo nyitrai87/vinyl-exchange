@@ -24,4 +24,27 @@ function createUser(req, res) {
     });
 }
 
-module.exports = createUser;
+function login(req, res) {
+    const userReq = req.body;
+
+    if(!userReq || !userReq.userName || !userReq.password) {
+        res.sendStatus(responseCodes.unauthorized);
+        return;
+    }
+
+    User.findOne({ userName: userReq.userName }, (err, user) => {
+        if(err || !user) {
+            res.sendStatus(responseCodes.unauthorized);
+            return;
+        }
+        bcrypt.compare(userReq.password, user.password, (err, result) => {
+            if(err || !result) {
+                res.sendStatus(responseCodes.unauthorized);
+                return;
+            }
+            res.sendStatus(responseCodes.ok);
+        });
+    });
+}
+
+module.exports = { createUser: createUser, login: login };
