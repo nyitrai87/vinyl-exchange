@@ -1,7 +1,6 @@
 async function onContentLoaded() {
     const response = await fetch('/vinyls');
     const vinyls = await response.json();
-    console.log(vinyls);
 
     vinyls.forEach(element => {
         const div = document.createElement('div');
