@@ -4,11 +4,11 @@ const config = require('config');
 const mongoDbClient = require('./data/mongodb-client');
 
 const authAPI = require('./auth/auth.api');
-const listVinylsHandler = require('./api/vinyls/list-all-handler');
-const getVinylById = require('./api/vinyls/get-vinyl-handler');
-const createNewVinyl = require('./api/vinyls/create-vinyl-handler');
-const deleteVinylById = require('./api/vinyls/delete-vinyl-handler');
-const modifyVinylById = require('./api/vinyls/modify-vinyl-handler');
+const listVinylsHandler = require('./vinyls/api/list-all-handler');
+const getVinylById = require('./vinyls/api/get-vinyl-handler');
+const createNewVinyl = require('./vinyls/api/create-vinyl-handler');
+const deleteVinylById = require('./vinyls/api/delete-vinyl-handler');
+const modifyVinylById = require('./vinyls/api/modify-vinyl-handler');
 
 const DEFAULT_PORT = 3000;
 const port = config.get('express.port') || DEFAULT_PORT;
