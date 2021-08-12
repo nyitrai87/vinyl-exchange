@@ -44,6 +44,10 @@ app.get('/registration', (req, res) => {
     res.sendFile(__dirname + '/registration.html');
 });
 
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/home.html');
+});
+
 app.get('/vinyls', listVinylsHandler);
 app.get('/vinyls/:id', getVinylById);
 app.post('/vinyls', createNewVinyl);

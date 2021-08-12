@@ -1,0 +1,11 @@
+.vinyl {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    margin: 8px;
+}
+
+.cover {
+    width: 85%;
+    opacity: 0.3;
+}
