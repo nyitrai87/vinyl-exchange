@@ -1,5 +1,6 @@
 const express = require('express');
 const config = require('config');
+const session = require('express-session');
 
 const mongoDbClient = require('./data/mongodb-client');
 
@@ -35,6 +36,13 @@ mongoDbClient.connect(connectionString);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 86400000 },
+    name: 'sessionID'
+}));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
@@ -46,6 +54,11 @@ app.get('/registration', (req, res) => {
 
 app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/home.html');
+});
+
+app.get('/logout', (req, res) => {
+    req.session.destroy();
+    res.redirect('/');
 });
 
 app.get('/vinyls', listVinylsHandler);
