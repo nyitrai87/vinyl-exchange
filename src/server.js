@@ -1,6 +1,7 @@
 const express = require('express');
 const config = require('config');
 const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 const mongoDbClient = require('./data/mongodb-client');
 
@@ -41,7 +42,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: { maxAge: 86400000 },
-    name: 'sessionID'
+    name: 'sessionID',
+    store: MongoStore.create({ mongoUrl: connectionString })
 }));
 
 app.get('/', (req, res) => {
@@ -53,6 +55,10 @@ app.get('/registration', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
+    if(!req.session.userID) {
+        res.redirect('/');
+        return;
+    }
     res.sendFile(__dirname + '/home.html');
 });
 
