@@ -3,6 +3,7 @@
     --color-magenta: #D81B60;
     --color-magenta-dark: #C11856;
     --color-error: #FF0000;
+    --color-white: #FFFFFF;
     --zindex-header: 100;
 }
 
@@ -19,7 +20,7 @@ body {
 button {
     font-weight: 300;
     border: none;
-    color: white;
+    color: var(--color-white);
     text-transform: uppercase;
     padding: 8px 80px;
     font-size: 14px;
@@ -49,6 +50,7 @@ header {
     height: 60px;
     align-items: center;
     padding: 10px 15px;
+    justify-content: space-between;
 }
 
 footer {
@@ -106,4 +108,12 @@ footer {
 
 .flex-column {
     flex-direction: column;
+}
+
+#logout {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    padding: 8px 16px;
+    text-decoration: none;
 }

@@ -42,6 +42,7 @@ function login(req, res) {
                 res.sendStatus(responseCodes.unauthorized);
                 return;
             }
+            req.session.userID = user._id;
             res.sendStatus(responseCodes.ok);
         });
     });
