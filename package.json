@@ -1,7 +1,7 @@
 {
     "name": "vinyl-exchange",
     "version": "0.0.1",
-    "description": "> Web platform for exchanging vinyls",
+    "description": "Training project to practice web-related core technologies.",
     "main": "index.js",
     "scripts": {
         "prepare": "husky install",
@@ -16,6 +16,14 @@
         "url": "git+https://github.com/nyitrai87/vinyl-exchange.git"
     },
     "author": "Adam Nyitrai",
+    "contributors": [
+        {
+            "name": "Attila Gyöngyösi",
+            "email": "attilagyongyosi0@gmail.com",
+            "url": "https://attilagyongyosi.com"
+        }
+    ],
+    "private": true,
     "license": "UNLICENSED",
     "bugs": {
         "url": "https://github.com/nyitrai87/vinyl-exchange/issues"
@@ -24,21 +32,22 @@
     "dependencies": {
         "bcrypt": "5.0.1",
         "config": "3.3.6",
-        "connect-mongo": "^4.5.0",
+        "connect-mongo": "4.5.0",
         "cross-env": "7.0.3",
         "express": "4.17.1",
-        "express-session": "^1.17.2",
-        "mongoose": "5.13.0"
+        "express-session": "1.17.2",
+        "mongoose": "6.0.2"
     },
     "devDependencies": {
         "@attilagyongyosi/eslint-config": "0.4.0",
         "@attilagyongyosi/path-linter": "2.1.5",
-        "@commitlint/cli": "12.1.4",
-        "@commitlint/config-conventional": "12.1.4",
-        "concurrently": "6.2.0",
-        "eslint": "7.28.0",
+        "@commitlint/cli": "13.1.0",
+        "@commitlint/config-conventional": "13.1.0",
+        "concurrently": "6.2.1",
+        "eslint": "7.32.0",
         "eslint-config-recommended": "4.1.0",
-        "husky": "6.0.0",
-        "nodemon": "2.0.7"
-    }
+        "husky": "7.0.2",
+        "nodemon": "2.0.12"
+    },
+    "type": "commonjs"
 }
